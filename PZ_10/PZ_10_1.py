@@ -6,22 +6,14 @@
 file = open('file7_1.txt', 'w')  # Создаём новый .txt файл
 file.writelines('5, 4, 3, 2, 1, -1, -2, -3, -4, -5')  # Записываем в него последовательность
 file.close()  # Закрываем файл
-dano = open('file7_1.txt').read(), '\n'  # Исходная последовательность
-dlina = str(len(open('file7_1.txt').read().split(', '))), '\n'  # Количество элемнтов
 d = []  # Пустой список
-for i in open('file7_1.txt').read().split(', '):  # Перебор файла
-    d.append(int(i))  # Запись целочисленных в список
-index_minimum = str(d.index(min(d))), '\n'  # Индекс минимального из списка
+[d.append(int(i)) for i in open('file7_1.txt').read().split(', ')]   # Перебор файла запись целочисленных в список
+index_minimum = d.index(min(d))  # Индекс минимального из списка
 per_spisok = []  # Пустой список
-for i in d:  # Перебор по списку
-    per_spisok.append(i * d[0])  # Каждый элемент умножается на первый
+[per_spisok.append(i * d[0]) for i in d]  # Перебор по списку каждый элемент умножается на первый
 u = open('file_new7_1.txt', 'w')  # Создаём новый .txt файл
-u.writelines('Исходные данные: ')  # Добавляем в .txt файл исходнные данные
-u.writelines(dano)
-u.writelines('Количество элементов: ')  # Добавляем в .txt файл количество элементов
-u.writelines(dlina)
-u.writelines('Индекс последнего минимального элемента: ')  # Добавляем в .txt файл индекс последнего минимального
-u.writelines(index_minimum)
-u.writelines('Список умноженный на первый элемент: ')  # Добавляем в .txt файл список умноженный на первый элемент
-u.writelines(str(per_spisok))
+print('Исходные данные:', open('file7_1.txt').read(), file=u)
+print('Количество элементов:', len(open('file7_1.txt').read().split(', ')), file=u)
+print('Индекс последнего минимального элемента:', index_minimum, file=u)
+print('Список умноженный на первый элемент:', per_spisok, file=u)
 u.close()  # Закрываем .txt файл
