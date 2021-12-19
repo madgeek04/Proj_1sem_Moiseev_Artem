@@ -6,13 +6,10 @@
 file = open('file7_1.txt', 'w')  # Создаём новый .txt файл
 file.writelines('5, 4, 3, 2, 1, -1, -2, -3, -4, -5')  # Записываем в него последовательность
 file.close()  # Закрываем файл
-d = []  # Пустой список
-[d.append(int(i)) for i in open('file7_1.txt').read().split(', ')]   # Перебор файла запись целочисленных в список
-per_spisok = []  # Пустой список
-[per_spisok.append(i * d[0]) for i in d]  # Перебор по списку каждый элемент умножается на первый
+d = [int(i) for i in open('file7_1.txt').read().split(', ')]   # Перебор файла запись целочисленных в список
 u = open('file_new7_1.txt', 'w')  # Создаём новый .txt файл
 print('Исходные данные:', open('file7_1.txt').read(), file=u)
 print('Количество элементов:', len(open('file7_1.txt').read().split(', ')), file=u)
 print('Индекс последнего минимального элемента:', d.index(min(d)), file=u)
-print('Список умноженный на первый элемент:', per_spisok, file=u)
+print('Список умноженный на первый элемент:', [i * d[0] for i in d], file=u)
 u.close()  # Закрываем .txt файл
