@@ -3,7 +3,7 @@ import secrets
 import string
 
 
-def generate_string():
+def generate_string(lenght):
     a = string.ascii_letters + string.digits
     b = ''.join(secrets.choice(a) for i in range(int(n.get())))
     c['text'] = 'Сгенерированный пароль', b
