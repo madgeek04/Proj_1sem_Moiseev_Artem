@@ -4,10 +4,8 @@
 # обработку элементов: Исхдные данные: Количество элементов: Индекс последнего минимального элемента:
 # Умножаем все элементы на первый элемент:
 print('5, 4, 3, 2, 1, -1, -2, -3, -4, -5', file=open('file7_1.txt', 'w'))
-d = [int(i) for i in open('file7_1.txt').read().split(', ')]   # Перебор файла запись целочисленных в список
-u = open('file_new7_1.txt', 'w')  # Создаём новый .txt файл
+d, u = [int(i) for i in open('file7_1.txt').read().split(', ')], open('file_new7_1.txt', 'w')
 print('Исходные данные:', open('file7_1.txt').read(), file=u)
 print('Количество элементов:', len(open('file7_1.txt').read().split(', ')), '\n', file=u)
 print('Индекс последнего минимального элемента:', d.index(min(d)), '\n', file=u)
 print('Список умноженный на первый элемент:', [i * d[0] for i in d], file=u)
-u.close()  # Закрываем .txt файл
