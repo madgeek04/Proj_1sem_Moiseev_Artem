@@ -1,0 +1,14 @@
+http://stream.hoster.by:8081/pilotfm/audio/icecast.audio
+http://stream1.euroradio.fm:8000/euroradio1?seed=1523961466
+http://listen1.myradio24.com:9000/3355
+http://live.novoeradio.by:8000/novoeradio-128k
+http://live.novoeradio.by:8000/narodnoe-radio-128k
+http://listen.teploe.net:8100/npkfm
+http://sv.wargaming.fm:8051/128
+http://gomeltv.by:2015/gomelradio
+http://live.legendy.by:8000/legendyfm
+http://s1.radioheart.ru:8001/radiogomel
+http://radio2.teploe.net:8000/teploeradio
+http://fm.1tvcrimea.ru:8000/stream.mp3
+http://retroserver.streamr.ru:8040/radio7128.mp3
+http://hls-01-retro.emgsound.ru/12/128/playlist.m3u8
