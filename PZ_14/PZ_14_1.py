@@ -1,2 +1,6 @@
+import re
 import tldextract
-print(*[tldextract.extract(i.split(' ')[-1]).fqdn for i in open('spisok.txt').read().split('\n')], sep='\n')
+r = re.compile('\\S+')
+g = [r.findall(i) for i in open('spisok.txt').readlines()]
+for o in g:
+    print(tldextract.extract(o[-1]).fqdn)
